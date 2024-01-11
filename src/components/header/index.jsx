@@ -15,7 +15,9 @@ function Header() {
 
   const dispatch = useDispatch();
 
-  const { currentUser } = useSelector((state) => state.userReducer);
+  const { currentUser } = useSelector((state) => state.userReducer); // Pegando o valor de currentUser do arquivo reducer (pasta user). Se dermos um console.log em currentUser, obteremos o valor atual do estado userReducer, que é null
+
+  // console.log(currentUser);
 
   const handleCartClick = () => {
     setCartIsVisible(true);
@@ -38,7 +40,6 @@ function Header() {
         ) : (
           <div onClick={handleLoginClick}>Login</div>
         )}
-
         <div onClick={handleCartClick}>Carrinho</div>
       </Styles.Buttons>
 
